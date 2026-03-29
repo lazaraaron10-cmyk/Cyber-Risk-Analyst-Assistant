@@ -1,13 +1,9 @@
 from flask import Flask, request, jsonify, render_template
 from groq import Groq
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 app = Flask(__name__, template_folder='.')
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GROQ_API_KEY = "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"
 
 client = Groq(api_key=GROQ_API_KEY)
 
